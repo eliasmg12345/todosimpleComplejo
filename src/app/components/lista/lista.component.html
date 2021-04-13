@@ -1,0 +1,27 @@
+<!-- A14 iterando el array ejemplo este parrafo tengo que repetir tantas veces
+como  tareas tenga por lo tanto ejecuto el *ngFor-->
+
+<!-- se recomienda hacer un diseno de una unica tarea cuando esa tarea esta bien
+pasamos a repetirlo con sus css repetidos jajaja -->
+
+<!-- haciendo que el fondo de la tarea cambie si esta comple o incomp
+para esto utilizaremos ngClass como invluye un booleano -->
+<div class="lista" *ngFor="let tareai of tareas;let indice=index;" [ngClass]='{completa:tareai.completa,incompleta:!tareai.completa}'>
+    <div class="tarea">
+        <h3>{{tareai.titulo}}</h3>
+        <p>{{tareai.descripcion}}</p>
+        <!-- A 15 como con el evento click accedo a la tarea mas facil????
+            solo pasando la tarea le paso a referencia al objeto con la que
+        quiero trabajar me voy al ts de lista A16 -->
+
+        <!-- para que memuestre el texto cambiable podemos asignarlo 
+            utlizando sentencia JS.....ej tareai.completa y mirarlo a travez de un
+            ternario ? si es true  que diga INCOMPLETA sino INCOMPLETA -->
+        <button (click)="onClick(tareai)">{{tareai.completa ? 'INCOMPLETA':'COMPLETA'}}</button>
+
+        <!-- A17 si queremos borrar la tarea tendremos que tener un click es
+        conveniente pasarle el indice...el cual se obtiene a partir del array
+    del *ngFor simplemente creo la variable indice y le paso el valor index    -->
+        <button (click)="onClickBorrar(indice)">Borrar</button>
+    </div>
+</div>

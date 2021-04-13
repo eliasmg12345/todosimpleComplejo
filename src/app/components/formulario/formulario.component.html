@@ -1,0 +1,25 @@
+<!-- A4 en el siguiente formulario queremos rellenar y cuando le demos en enviar
+queremos que envie los datos al padre...es decir cuando le de al boton 
+un output emitira la tarea generada -->
+<!-- el primer paso es tener la tarea generada y saber que se esta rellenando 
+entonces los input text tendran que estar rellenado con alguna propiedad 
+el modo que sabemos es atravez de ngModel    -->
+<!-- Para utilizar el ngModel 1 es hacer dentgro del modulo de la APP A5..... -->
+<!-- 2 crear dentro del ts del formulario una variable que me permita interactuar
+con los diferentes campos A6....-->
+
+<!-- A7 asignando la nuevaTarea a cada campo de texto con el ngModel -->
+<!-- A8 quiero que al pulsar enviar quiero que la recoja el padre
+por lo tanto voy a crar el evento click sobre el boton luego ir a definir en el ts-->
+<div class="formulario">
+    <div class="form-group">
+        <label >Tutulo</label>
+        <input type="text" [(ngModel)]="nuevaTarea.titulo">
+    </div>
+    <div class="form-group">
+        <label >Descripcion</label>
+        <input type="text" [(ngModel)]="nuevaTarea.descripcion">
+    </div>
+    
+    <button (click)="onClick()">Enviar</button>
+</div>

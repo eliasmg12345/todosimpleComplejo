@@ -1,0 +1,25 @@
+.lista{
+      display: flex;
+      /* cambia la linea en caso de que no quepan  */
+      flex-wrap:wrap ;
+        /* poniendoo en el centro */
+        justify-content:center;
+
+}
+.lista .tarea{
+    border: 1px solid black;
+    padding: 10px;
+    width: 40%;
+    margin: 5px;
+}
+/* al h3 le quitamos el margen de arriba */
+.lista .tarea h3{
+    margin-top: 10px;
+}
+.completa{
+    background-color: chartreuse;
+
+}
+.incompleta{
+    background-color: tomato;
+}
